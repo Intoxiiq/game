@@ -1,0 +1,21 @@
+package soufix.client.other;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Restriction {
+
+    public static Map<Integer, Restriction> restrictions = new HashMap<>();
+    //region
+    public Map<String, Long> aggros = new HashMap<>();
+    public Map<String, Long> koli = new HashMap<>();
+    public boolean command = true;
+
+    public static Restriction get(int id) {
+        if (restrictions.get(id) != null)
+            return restrictions.get(id);
+        return new Restriction();
+    }
+
+    //endregion
+}
